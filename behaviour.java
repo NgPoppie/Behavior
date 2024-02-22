@@ -46,19 +46,20 @@ public class Trades {
     public static void main(String[] args) {
        List<Trades> inventory = new ArrayList<>();
        
-inventory.add(new Trades());
+inventory.add(new Trades( Pairs.USDJPY.getProfit()));
+inventory.add(new Trades( Pairs.OILUSD.getProfit()));
 
 
         List<Trades> good = filterTrades(inventory, new Higher());
-        for(Trades trade:good)
-            System.out.println("Better profit is " + trade.getProfit());
+        for(Trades trade:good){
+            System.out.println("Better profit is " + trade.getProfit());}
       
     }
 
     private int profit;
 
-    public Trades() {
-        this.profit = Pairs.EURJPY.getProfit(); // Example initialization, modify as needed
+    public Trades(int profit) {
+        this.profit =profit; // Example initialization, modify as needed
     }
 
     public int getProfit() {

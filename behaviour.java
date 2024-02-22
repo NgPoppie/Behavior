@@ -50,7 +50,9 @@ inventory.add(new Trades());
 
 
         List<Trades> good = filterTrades(inventory, new Higher());
-        System.out.println(good);
+        for(Trades trade:good)
+            System.out.println("Better profit is " + trade.getProfit());
+      
     }
 
     private int profit;

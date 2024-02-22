@@ -50,6 +50,7 @@ inventory.add(new Trades());
 
 
         List<Trades> good = filterTrades(inventory, new Higher());
+        System.out.println(good);
     }
 
     private int profit;
